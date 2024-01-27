@@ -1,6 +1,7 @@
 const entrada = document.getElementById("input");
 const saida = document.getElementById("output");
 const alerta = document.getElementById("alerta");
+const botao_copiar = document.getElementById("copiar");
 
 const criptografias = {
     "ONE": function (texto, reverso) {
@@ -47,3 +48,9 @@ function criptografar(reverso=false) {
     saida.innerHTML = cifra;
 }
 
+
+function copiar() {
+    window.navigator.clipboard.writeText(saida.innerText);
+    botao_copiar.innerText = "Copiado!";
+    setTimeout(() => {botao_copiar.innerText = "Copiar"}, 2000);
+}
