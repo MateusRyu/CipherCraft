@@ -54,3 +54,7 @@ button {
     width: 328px;
     padding: .5rem 0px;
 }
+
+.escondido {
+    display: none;
+}

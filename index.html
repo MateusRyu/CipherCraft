@@ -20,19 +20,20 @@
                 </p>
             </div>
             <div>
-                <button>Criptografar</button>
-                <button>Descriptografar</button>
+                <button onclick="criptografar()">Criptografar</button>
+                <button onclick="criptografar('reverso')">Descriptografar</button>
             </div>
         </section>
         <section>
-            <div class="saida__padrao">
+            <div id="alerta">
                 <h2>Nenhuma mensagem encontrada</h2>
                 <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
-            <p class="saida__texto"></p>
+            <p id="output" class="escondido"></p>
             <button>Copiar</button>
         </section>
     </main>
+    <script src="script.js" defer></script>
     <footer>
         Desenvolvido com &hearts; por Mateus Ryu Yamaguchi no 
         <a href="https://www.oracle.com/br/education/oracle-next-education/">
