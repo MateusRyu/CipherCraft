@@ -1,0 +1,56 @@
+:root {
+    --cor-principal-dark-100: #609ED4;
+    --cor-principal-dark-200: #356EA9;
+    --cor-principal-dark-300: #0A3871;
+    --cor-principal-dark-400: #072B61;
+    --cor-principal-dark-500: #052051;
+    --cor-principal-light-100: #F3F5FC;
+    --cor-principal-light-200: #EFF1FA;
+    --cor-principal-light-300: #E9ECF8;
+    --cor-principal-light-400: #AAB2D5;
+    --cor-principal-light-500: #757FB2;
+    --cor-cinza-100: #CED4DA;
+    --cor-cinza-200: #ADB5BD;
+    --cor-cinza-300: #868E96;
+    --cor-cinza-400: #495057;
+    --cor-cinza-500: #343A40;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+header {
+    background-color: var(--cor-principal-dark-100);
+    padding: 1rem 2rem;
+}
+
+main {
+    background-color: var(--cor-principal-light-100);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    min-height: 75.3vh;
+}
+
+section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-around;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--cor-cinza-300);
+}
+
+button {
+    width: 328px;
+    padding: .5rem 0px;
+}
