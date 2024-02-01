@@ -54,24 +54,21 @@ button {
     width: 328px;
     padding: .5rem 0px;
 }
-
-input {
+#input {
     width: 100%;
-    border: none;
+    height: auto;
+    flex: 1;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid #CCC;
+    background-color: #F8F8F8;
+    resize: none;
 }
 
 .entrada {
     display: flex;
     flex-direction: column;
     height: 100%;
-}
-
-#entradas {
-    height: 100%;
-    flex: 1;
-    margin-bottom: .5rem;
-    padding: 1rem;
-    border: solid black;
 }
 
 .escondido {
