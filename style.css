@@ -28,8 +28,10 @@ header {
 main {
     background-color: var(--cor-principal-light-100);
     padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
     min-height: 75.3vh;
 }
 
