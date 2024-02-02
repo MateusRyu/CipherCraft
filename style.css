@@ -29,10 +29,8 @@ main {
     background-color: var(--cor-principal-light-100);
     padding: 1rem 2rem;
     display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 2fr 1fr;
     gap: 1rem;
-    min-height: 75.3vh;
+    min-height: 78.1vh;
 }
 
 section {
@@ -56,6 +54,7 @@ button {
     width: 328px;
     padding: .5rem 0px;
 }
+
 #input {
     width: 100%;
     height: auto;
@@ -73,6 +72,31 @@ button {
     height: 100%;
 }
 
+button {
+    width: 100%;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
 .escondido {
     display: none;
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+    .botoes {
+        flex-direction: row;
+    }
+}
+
+/* Desktops */
+@media only screen and (min-width: 992px) {
+    main  {
+        grid-template-columns: 2fr 1fr;
+    }
 }
