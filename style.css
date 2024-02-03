@@ -17,7 +17,13 @@
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 header {
@@ -81,6 +87,14 @@ button {
     flex-direction: column;
     width: 100%;
     gap: 1rem;
+}
+
+#alerta {
+    text-align: center;
+}
+
+.extra-grande {
+    font-size: 14rem;
 }
 
 .escondido {
