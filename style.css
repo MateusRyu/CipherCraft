@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 :root {
     --cor-principal-dark-100: #609ED4;
     --cor-principal-dark-200: #356EA9;
@@ -14,6 +16,10 @@
     --cor-cinza-300: #868E96;
     --cor-cinza-400: #495057;
     --cor-cinza-500: #343A40;
+}
+
+* {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 h1 {
