@@ -24,7 +24,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: 700;
-}
+} 
 
 header {
     background-color: var(--cor-principal-dark-100);
@@ -94,7 +94,7 @@ button {
 }
 
 .extra-grande {
-    font-size: 14rem;
+    font-size: 10rem;
 }
 
 .escondido {
