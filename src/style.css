@@ -94,8 +94,7 @@ button {
 }
 
 .extra-grande {
-    display: none;
-    font-size: 8rem;
+    font-size: 14rem;
 }
 
 .escondido {
@@ -106,10 +105,6 @@ button {
 @media only screen and (min-width: 768px) {
     .botoes {
         flex-direction: row;
-    }
-
-    .extra-grande {
-        display: inline;
     }
 }
 
