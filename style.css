@@ -85,6 +85,10 @@ button {
     resize: none;
 }
 
+#output {
+    flex: 1;
+}
+
 .entrada {
     display: flex;
     flex-direction: column;
