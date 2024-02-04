@@ -1,7 +1,29 @@
 const entrada = document.getElementById("input");
 const saida = document.getElementById("output");
-const alerta = document.getElementById("alerta");
 const botao_copiar = document.getElementById("copiar");
+const alerta__icone = document.getElementById("alerta__icone");
+const alerta__titulo = document.getElementById("alerta__titulo");
+const alerta__mensagem = document.getElementById("alerta__mensagem");
+
+const alertas = {
+    vazio: {
+        icone: "&nexist;",
+        titulo: "Nenhuma mensagem encontrada",
+        mensagem: "Digite um texto que você deseja criptografar ou descriptografar."
+    },
+    nenhum: {
+        icone: "",
+        titulo: "",
+        mensagem: ""
+    }
+}
+
+function exibeAlerta(tipo) {
+    let alerta = alertas[tipo];
+    alerta__icone.innerHTML = alerta.icone;
+    alerta__titulo.innerHTML = alerta.titulo;
+    alerta__mensagem.innerHTML = alerta.mensagem;
+}
 
 const criptografias = {
     "ONE": function (texto, reverso) {
@@ -41,7 +63,7 @@ function exibeElemento(elemento){
 
 
 function criptografar(reverso=false) {
-    escondeElemento(alerta);
+    exibeAlerta("nenhum");
     exibeElemento(saida);
     reverso = reverso ? true : false;
     cifra = criptografias["ONE"](input.value, reverso);
