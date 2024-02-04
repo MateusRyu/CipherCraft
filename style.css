@@ -76,13 +76,39 @@ button {
 
 #input {
     width: 100%;
-    height: auto;
+    height: 100%;
     flex: 1;
     padding: 1rem;
     box-sizing: border-box;
     border: 1px solid #CCC;
     background-color: #F8F8F8;
     resize: none;
+}
+
+.corpo {
+    flex: 1;
+    position: relative;
+}
+
+.botao_fantasma {
+    position: absolute;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    right: 1rem;
+    top: 1rem;
+    background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 999px;
+    border: none;
+    z-index: 2;
+}
+
+.botao_fantasma:hover {
+    background-color: lightblue;
 }
 
 #output {

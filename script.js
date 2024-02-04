@@ -45,6 +45,9 @@ const criptografias = {
     }
 };
 
+function limpaCampo() {
+    entrada.value = "";
+}
 
 function escondeElemento(elemento){
     if (elemento.classList.contains('escondido') == false) {
