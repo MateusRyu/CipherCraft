@@ -1,33 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
 :root {
-    --cor-principal-dark-100: #609ED4;
-    --cor-principal-dark-200: #356EA9;
-    --cor-principal-dark-300: #0A3871;
-    --cor-principal-dark-400: #072B61;
-    --cor-principal-dark-500: #052051;
-    --cor-principal-light-100: #F3F5FC;
-    --cor-principal-light-200: #EFF1FA;
-    --cor-principal-light-300: #E9ECF8;
-    --cor-principal-light-400: #AAB2D5;
-    --cor-principal-light-500: #757FB2;
-    --cor-cinza-100: #CED4DA;
-    --cor-cinza-200: #ADB5BD;
-    --cor-cinza-300: #868E96;
-    --cor-cinza-400: #495057;
-    --cor-cinza-500: #343A40;
+    /* Cores */
+    --cor-principal-100: #7F4288;
+    --cor-principal-200: #933A7E;
+    --cor-principal-300: #A8255F;
+    --cor-principal-400: #BC2A6A;
+    --cor-principal-500: #BE2969;
+    --cor-secundaria-100: #3882d6;
+    --cor-secundaria-200: #2864B3;
+    --cor-secundaria-300: #144883;
+    --cor-secundaria-400: #154178;
+    --cor-secundaria-500: #152C50;
+    --cor-neutra-100: #CED4DA;
+    --cor-neutra-200: #ADB5BD;
+    --cor-neutra-300: #868E96;
+    --cor-neutra-400: #495057;
+    --cor-neutra-500: #343A40;
+
+    /* Borda */
+    --borda: 4px solid var(--cor-principal-500);
 }
 
 * {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Gruppo', sans-serif;
 }
 
 h1 {
     font-size: 2rem;
+    letter-spacing: 0.8rem;
     font-weight: 500;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, var(--cor-principal-500) 0%, var(--cor-principal-100) 50%, var(--cor-secundaria-500) 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
 
 h2 {
+    margin-left: 1.5rem;
     font-size: 1.25rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -39,33 +53,56 @@ h3 {
 } 
 
 header {
-    background-color: var(--cor-principal-dark-100);
+    background-color: var(--cor-secundaria-500);
     padding: 1rem 2rem;
+    border-bottom: var(--borda);
 }
 
 main {
-    background-color: var(--cor-principal-light-100);
-    padding: 1rem 2rem;
+    background-color: var(--cor-secundaria-400);
+    padding: 2rem 2rem;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     min-height: 78.1vh;
 }
 
 section {
+    position: relative;
     height: auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: space-between;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 1rem;
-    border-radius: 1rem;
+    overflow: hidden;
 }
+
+section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 3rem solid var(--cor-secundaria-400);
+    border-left: 2rem solid transparent;
+    width: 60%;
+}
+
+section:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 3rem solid var(--cor-secundaria-400);
+    border-right: 2rem solid transparent;
+    width: 0px;
+}
+
 
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: var(--cor-cinza-300);
+    background-color: var(--cor-neutra-300);
 }
 
 button {
@@ -143,6 +180,7 @@ button {
 .escondido {
     display: none;
 }
+
 
 /* Tablets */
 @media only screen and (min-width: 768px) {
