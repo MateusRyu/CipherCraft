@@ -41,11 +41,20 @@ h1 {
 }
 
 h2 {
-    margin-left: 1.5rem;
+    margin-left: 0px;
     font-size: 1.25rem;
     font-weight: 700;
     text-transform: uppercase;
 } 
+
+h2:after {
+    content: "";
+    width: 100%;
+    height: 0.5rem;
+    display: block;
+    background: linear-gradient(90deg, var(--cor-principal-500) 0%, var(--cor-principal-100) 30%, var(--cor-secundaria-500) 60%, rgba(0,  0, 0, 0));
+    clip-path: polygon(0 0, 0 100%, 10% 100%, calc(10% + 4px) 2px, 100% 2px, 100% 0);
+}
 
 h3 {
     font-size: 1.25rem;
@@ -74,7 +83,7 @@ section {
     gap: 1rem;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 1rem;
+    padding: 3rem;
     overflow: hidden;
 }
 
@@ -85,15 +94,16 @@ section:before {
     right: 0;
     border-top: 3rem solid var(--cor-secundaria-400);
     border-left: 2rem solid transparent;
-    width: 60%;
+    width: 0px;
 }
+
 
 section:after {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    border-top: 3rem solid var(--cor-secundaria-400);
+    border-bottom: 3rem solid var(--cor-secundaria-400);
     border-right: 2rem solid transparent;
     width: 0px;
 }
@@ -117,10 +127,18 @@ button {
     flex: 1;
     padding: 1rem;
     box-sizing: border-box;
-    border: 1px solid #CCC;
-    background-color: #F8F8F8;
+    font-size: 1.5rem;
+    color: var(--cor-neutra-100);
+    background-color: var(--cor-neutra-400);
     resize: none;
 }
+
+#input:focus {
+    background-color: var(--cor-neutra-300);
+    outline: none;
+    border: none;
+}
+
 
 .corpo {
     flex: 1;
