@@ -162,6 +162,10 @@ button {
     z-index: 2;
 }
 
+.botao_fantasma::before {
+    display: none;
+}
+
 .botao_fantasma:hover {
     background-color: lightblue;
 }
@@ -178,13 +182,25 @@ button {
 
 button {
     width: 100%;
+    border: none;
+    border-right: 4px solid var(--cor-neutra-500);
+    position: relative;
 }
+
 
 .botoes {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 1rem;
+}
+
+.botao_principal {
+    background-color: var(--cor-principal-500);
+}
+
+.botao_secundario {
+    background-color: var(--cor-secundaria-100);
 }
 
 #alerta {
