@@ -16,7 +16,7 @@ const alertas = {
         titulo: "",
         mensagem: ""
     },
-    ONE: {
+    one: {
         icone: "&#9888;",
         titulo: "Mensagem inválida para conversão!",
         mensagem: "A mensagem deve ter apenas letras minúsculas e sem acento."
@@ -36,8 +36,11 @@ function validaAlfabetoMinusculo(texto) {
 
 const criptografias = {
     "ONE": function (texto, reverso) {
-        if (validaAlfabetoMinusculo(texto) == false) {
-            exibeAlerta("ONE");
+        if (texto=="") {
+            exibeAlerta("vazio");
+            return(false);
+        } else if (validaAlfabetoMinusculo(texto) == false) 
+            exibeAlerta("one");
         } else if (reverso == false) {
             cifra = texto.replaceAll("e", "enter");
             cifra = cifra.replaceAll("i", "imes");
@@ -78,11 +81,13 @@ function exibeElemento(elemento){
 
 
 function criptografar(reverso=false) {
-    exibeAlerta("nenhum");
-    exibeElemento(saida);
     reverso = reverso ? true : false;
     cifra = criptografias["ONE"](input.value, reverso);
-    saida.innerHTML = cifra;
+    if (cifra) {
+        exibeAlerta("nenhum");
+        exibeElemento(saida);
+        saida.innerHTML = cifra;
+    } 
 }
 
 
