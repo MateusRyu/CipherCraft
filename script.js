@@ -39,7 +39,7 @@ const criptografias = {
         if (texto=="") {
             exibeAlerta("vazio");
             return(false);
-        } else if (validaAlfabetoMinusculo(texto) == false) 
+        } else if (validaAlfabetoMinusculo(texto) == false) {
             exibeAlerta("one");
         } else if (reverso == false) {
             cifra = texto.replaceAll("e", "enter");
