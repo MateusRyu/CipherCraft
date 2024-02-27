@@ -1,66 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CipherCraft</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-    <link rel="manifest" href="./assets/site.webmanifest">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Ferramenta para criptografar e descripttografar mensagens"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>
-            CipherCraft
-        </h1>
+      <h1>CipherCraft</h1>
     </header>
     <main>
-        <section class="caixa">
-            <h2>
-                Entrada<span aria-hidden="true">_</span>
-            </h2>
-            <div class="entrada">
-                <div class="corpo">
-                    <button class="botao_fantasma" onclick="limpaCampo()">&#10006;</button>
-                    <textarea id="input" placeholder="Digite seu texto..."></textarea>
-                </div>
-                <p>
-                    &#9432; Apenas letras minúsculas e sem acento.
-                </p>
-            </div>
-            <div class="botoes">
-                <button class="botao_principal" onclick="criptografar()">
-                    Criptografar<span aria-hidden="true">_</span>
-                </button>
-                <button class="botao_secundario" onclick="criptografar('reverso')">
-                    Descriptografar<span aria-hidden="true">_</span>
-                </button>
-            </div>
-        </section>
-        <section class="caixa">
-            <h2>
-                Saída<span aria-hidden="true">_</span>
-            </h2>
-            <div id="alerta">
-                <p id="alerta__icone" class="extra-grande">&nexist;</p>
-                <h3 id="alerta__titulo" >Nenhuma mensagem encontrada</h3>
-                <p id="alerta__mensagem">Digite um texto que você deseja criptografar ou descriptografar.</p>
-            </div>
-            <p id="output" class="escondido"></p>
-            <button id="copiar" onclick="copiar()">
-                Copiar<span aria-hidden="true">_</span>
+      <section class="caixa">
+        <h2>Entrada<span aria-hidden="true">_</span></h2>
+        <div class="entrada">
+          <div class="corpo">
+            <button class="botao_fantasma" onclick="limpaCampo()">
+              &#10006;
             </button>
-        </section>
+            <textarea id="input" placeholder="Digite seu texto..."></textarea>
+          </div>
+          <p>&#9432; Apenas letras minúsculas e sem acento.</p>
+        </div>
+        <div class="botoes">
+          <button class="botao_principal" onclick="criptografar()">
+            Criptografar<span aria-hidden="true">_</span>
+          </button>
+          <button class="botao_secundario" onclick="criptografar('reverso')">
+            Descriptografar<span aria-hidden="true">_</span>
+          </button>
+        </div>
+      </section>
+      <section class="caixa">
+        <h2>Saída<span aria-hidden="true">_</span></h2>
+        <div id="alerta">
+          <p id="alerta__icone" class="extra-grande">&nexist;</p>
+          <h3 id="alerta__titulo">Nenhuma mensagem encontrada</h3>
+          <p id="alerta__mensagem">
+            Digite um texto que você deseja criptografar ou descriptografar.
+          </p>
+        </div>
+        <p id="output" class="escondido"></p>
+        <button id="copiar" onclick="copiar()">
+          Copiar<span aria-hidden="true">_</span>
+        </button>
+      </section>
     </main>
     <script src="script.js" defer></script>
     <footer>
-        Desenvolvido com &hearts; por <a href="https://www.linkedin.com/in/mateus-ryu-yamaguchi/" target="_blank">Mateus Ryu Yamaguchi</a> no 
-        <a href="https://www.oracle.com/br/education/oracle-next-education/" target="_blank">
-            Programa ONE
-        </a>!
+      Desenvolvido com &hearts; por
+      <a
+        href="https://www.linkedin.com/in/mateus-ryu-yamaguchi/"
+        target="_blank"
+        >Mateus Ryu Yamaguchi</a
+      >
+      no
+      <a
+        href="https://www.oracle.com/br/education/oracle-next-education/"
+        target="_blank"
+      >
+        Programa ONE </a
+      >!
     </footer>
-</body>
+  </body>
 </html>
+
