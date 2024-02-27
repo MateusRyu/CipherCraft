@@ -1,0 +1,4 @@
+webrick:
+  headers:
+    # 1 dia tem 86400 segundos
+    Cache-Control: max-age=86400
