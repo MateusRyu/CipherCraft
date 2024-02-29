@@ -131,12 +131,6 @@ footer {
   background-color: var(--cor-neutra-200);
 }
 
-button {
-  width: 328px;
-  padding: 0.5rem 0px;
-  text-transform: uppercase;
-}
-
 #input {
   width: 100%;
   height: 100%;
@@ -196,11 +190,20 @@ button {
 }
 
 button {
+  width: 328px;
+  padding: 0.5rem 0px;
+  text-transform: uppercase;
+  background-color: var(--cor-neutra-300);
   font-weight: 800;
   width: 100%;
   border: none;
   border-right: 4px solid var(--cor-neutra-500);
   position: relative;
+}
+
+button:hover {
+  color: white;
+  background-color: var(--cor-neutra-400);
 }
 
 button:before {
@@ -224,8 +227,16 @@ button:before {
   background-color: var(--cor-principal-500);
 }
 
+.botao_principal:hover {
+  background-color: var(--cor-principal-400);
+}
+
 .botao_secundario {
   background-color: var(--cor-secundaria-100);
+}
+
+.botao_secundario:hover {
+  background-color: var(--cor-secundaria-200);
 }
 
 #alerta {
@@ -253,4 +264,3 @@ button:before {
     grid-template-columns: 2fr 1fr;
   }
 }
-
