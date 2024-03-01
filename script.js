@@ -32,7 +32,7 @@ function exibeAlerta(tipo) {
 }
 
 function validaAlfabetoMinusculo(texto) {
-  return /^[a-zç]+$/.test(texto);
+  return /^[a-zç\s]+$/.test(texto);
 }
 
 const criptografias = {
