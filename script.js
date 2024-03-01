@@ -44,7 +44,6 @@ const criptografias = {
     } else if (validaAlfabetoMinusculo(texto) == false) {
       escondeElemento(saida);
       exibeAlerta("one");
-      console.error("input invalido");
       return false;
     } else if (reverso == false) {
       cifra = texto.replaceAll("e", "enter");
