@@ -32,16 +32,20 @@ function exibeAlerta(tipo) {
 }
 
 function validaAlfabetoMinusculo(texto) {
-  return /^[a-z]+$/.test(texto);
+  return /^[a-zç]+$/.test(texto);
 }
 
 const criptografias = {
   ONE: function (texto, reverso) {
     if (texto == "") {
+      limpaCampo();
       exibeAlerta("vazio");
       return false;
     } else if (validaAlfabetoMinusculo(texto) == false) {
+      escondeElemento(saida);
       exibeAlerta("one");
+      console.error("input invalido");
+      return false;
     } else if (reverso == false) {
       cifra = texto.replaceAll("e", "enter");
       cifra = cifra.replaceAll("i", "imes");
